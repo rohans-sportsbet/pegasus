@@ -1,0 +1,7 @@
+README.md
+setup.py
+pegasus.egg-info/PKG-INFO
+pegasus.egg-info/SOURCES.txt
+pegasus.egg-info/dependency_links.txt
+pegasus.egg-info/requires.txt
+pegasus.egg-info/top_level.txt

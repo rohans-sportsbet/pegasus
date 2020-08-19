@@ -1,0 +1,13 @@
+absl-py
+mock
+numpy
+rouge-score
+sacrebleu
+sentencepiece
+tensorflow-text==1.15.0rc0
+tfds-nightly
+tensor2tensor==1.15.0
+tensorflow-gpu==1.15.2
+
+[tensorflow]
+tensorflow-gpu==1.15.2
