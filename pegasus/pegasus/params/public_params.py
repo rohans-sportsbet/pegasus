@@ -306,9 +306,9 @@ def billsum_transformer(param_overrides):
 def racing_transformer(param_overrides):
   return transformer_params(
       {
-          "train_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/data/testdata/racing_train.tfrecord",
-          "dev_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/data/testdata/racing_test.tfrecord",
-          "test_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/data/testdata/racing_test.tfrecord",
+          "train_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/pegasus/data/testdata/racing_train.tfrecord",
+          "dev_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/pegasus/data/testdata/racing_test.tfrecord",
+          "test_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/pegasus/data/testdata/racing_test.tfrecord",
           "max_input_len": 1024,
           "max_output_len": 128,
           "train_steps": 10000,
@@ -321,9 +321,9 @@ def racing_transformer(param_overrides):
 def racing_transformer(param_overrides):
   return transformer_params(
       {
-          "train_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/data/testdata/racing_train.tfrecord",
-          "dev_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/data/testdata/racing_test.tfrecord",
-          "test_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/data/testdata/racing_test.tfrecord",
+          "train_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/pegasus/data/testdata/racing_train.tfrecord",
+          "dev_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/pegasus/data/testdata/racing_test.tfrecord",
+          "test_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/pegasus/data/testdata/racing_test.tfrecord",
           "max_input_len": 1024,
           "max_output_len": 256,
           "train_steps": 10000,
@@ -335,5 +335,5 @@ def racing_transformer(param_overrides):
 @registry.register("interactive_transformer")
 def racing_transformer(param_overrides, model):
   params = registry.get_params(f"{model}_transformer")(param_overrides)
-  params.test_pattern = "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/data/testdata/interactive_test.tfrecord"
+  params.test_pattern = "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/pegasus/data/testdata/interactive_test.tfrecord"
   return params
