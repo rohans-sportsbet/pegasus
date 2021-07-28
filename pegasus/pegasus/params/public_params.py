@@ -308,7 +308,7 @@ def racing_transformer(param_overrides):
       {
           "train_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/pegasus/data/testdata/racing_train.tfrecord",
           "dev_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/pegasus/data/testdata/racing_test.tfrecord",
-          "test_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/pegasus/data/testdata/racing_test.tfrecord",
+          "test_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/pegasus/data/testdata/racing_to_sum.tfrecord",
           "max_input_len": 1024,
           "max_output_len": 128,
           "train_steps": 10000,
@@ -323,7 +323,7 @@ def racing_transformer(param_overrides):
       {
           "train_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/pegasus/data/testdata/racing_train.tfrecord",
           "dev_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/pegasus/data/testdata/racing_test.tfrecord",
-          "test_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/pegasus/data/testdata/racing_test.tfrecord",
+          "test_pattern": "tfrecord:/home/ec2-user/SageMaker/pegasus/pegasus/pegasus/data/testdata/racing_to_sum.tfrecord",
           "max_input_len": 1024,
           "max_output_len": 256,
           "train_steps": 10000,
