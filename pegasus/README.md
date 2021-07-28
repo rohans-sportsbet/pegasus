@@ -13,8 +13,13 @@ python3 pegasus/bin/evaluate.py --params=cnn_dailymail_transformer --param_overr
 
 python3 pegasus/bin/evaluate.py --params=racing_transformer --param_overrides=vocab_filename=ckpt/pegasus_ckpt/c4.unigram.newline.10pct.96000.model,batch_size=1,beam_size=8,beam_alpha=0.8 --model_dir=ckpt/pegasus_ckpt/cnn_dailymail/model.ckpt-210000 --evaluate_test
 
+_run_short_racing_transformer:
+
 python3 pegasus/bin/evaluate.py --params=racing_transformer --param_overrides=vocab_filename=ckpt/pegasus_ckpt/c4.unigram.newline.10pct.96000.model,batch_size=1,beam_size=5,beam_alpha=0.6 --model_dir=ckpt/pegasus_ckpt/racing  --evaluate_test
 
+_run_long_racing_transformer:
+
+python3 pegasus/bin/evaluate.py --params=long_racing_transformer --param_overrides=vocab_filename=ckpt/pegasus_ckpt/c4.unigram.newline.10pct.96000.model,batch_size=1,beam_size=5,beam_alpha=0.6 --model_dir=ckpt/pegasus_ckpt/racing_long  --evaluate_test
 
 # run pegasus fine-tuning with your own racing material
 
@@ -28,11 +33,19 @@ python3 pegasus/bin/train.py --params=racing_transformer \
 --train_init_checkpoint=ckpt/pegasus_ckpt/cnn_dailymail/model.ckpt-210000 \
 --model_dir=ckpt/pegasus_ckpt/racing
 
+_train_short_racing_transformer:
+
 python3 pegasus/bin/train.py --params=racing_transformer \
 --param_overrides=vocab_filename=ckpt/pegasus_ckpt/c4.unigram.newline.10pct.96000.model \
 --train_init_checkpoint=ckpt/pegasus_ckpt/racing/model.ckpt-10000 \
 --model_dir=ckpt/pegasus_ckpt/racing
 
+_train_long_racing_transformer:
+
+python3 pegasus/bin/train.py --params=long_racing_transformer \
+--param_overrides=vocab_filename=ckpt/pegasus_ckpt/c4.unigram.newline.10pct.96000.model \
+--train_init_checkpoint=ckpt/pegasus_ckpt/cnn_dailymail/model.ckpt-210000 \
+--model_dir=ckpt/pegasus_ckpt/racing_long
 
 # run interactive summary
 
