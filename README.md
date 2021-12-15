@@ -1,4 +1,4 @@
-# pegasus - Qiong
+# Pegasus - SEO
 Forked from google-research/pegasus
 
 SEO project - Generate Track Descriptions. (Content Generation) 
